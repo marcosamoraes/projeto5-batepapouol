@@ -44,11 +44,11 @@ function listMessages(messages) {
   for (let i = 0; i < messages.length; i++) {
     const message = messages[i];
     if (message.type === "status") {
-      text += `<div class="message status"><span class="time">(${message.time})</span><b>${message.from}</b> ${message.text}</div>`;
+      text += `<div class="message status" data-test="message"><span class="time">(${message.time})</span><b>${message.from}</b> ${message.text}</div>`;
     } else if (message.type === "message") {
-      text += `<div class="message"><span class="time">(${message.time})</span><b>${message.from}</b> para <b>${message.to}:</b> ${message.text}</div>`;
+      text += `<div class="message" data-test="message"><span class="time">(${message.time})</span><b>${message.from}</b> para <b>${message.to}:</b> ${message.text}</div>`;
     } else if (message.type === "private_message" && message.to == userName) {
-      text += `<div class="message private"><span class="time">(${message.time})</span><b>${message.from}</b> reservadamente para <b>${message.to}:</b> ${message.text}</div>`;
+      text += `<div class="message private" data-test="message"><span class="time">(${message.time})</span><b>${message.from}</b> reservadamente para <b>${message.to}:</b> ${message.text}</div>`;
     }
   }
 

@@ -11,12 +11,12 @@
     <div class="container">
       <nav>
         <img src="./images/logo.jpg" alt="Logo do UOL" />
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="people" data-test="open-participants"></ion-icon>
       </nav>
       <div id="messages" class="messages"></div>
       <footer>
-        <input type="text" name="text" placeholder="Escreva aqui..." />
-        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
+        <input type="text" name="text" placeholder="Escreva aqui..." data-test="input-message" />
+        <ion-icon onclick="sendMessage()" name="paper-plane-outline" data-test="send-message"></ion-icon>
       </footer>
     </div>
 
